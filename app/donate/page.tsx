@@ -5,7 +5,7 @@ import { ArrowLeft, Coffee, Heart, DollarSign, CreditCard, Wallet, Star } from "
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { AnimatedBackground } from "@/components/animated-background"
-import { ThemeToggle } from "@/components/theme-toggle"
+// import { ThemeToggle } from "@/components/theme-toggle"
 import Link from "next/link"
 
 const donationOptions = [
@@ -68,7 +68,7 @@ export default function DonatePage() {
             <ArrowLeft className="h-5 w-5" />
           </Link>
         </Button>
-        <ThemeToggle />
+        {/* <ThemeToggle /> */}
       </div>
 
       {/* Main Content */}
