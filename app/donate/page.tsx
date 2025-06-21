@@ -61,15 +61,15 @@ export default function DonatePage() {
     <main className="min-h-screen relative overflow-hidden">
       <AnimatedBackground />
       
-      {/* Navigation */}
-      <div className="absolute top-6 left-6 right-6 z-10 flex justify-between items-center">
-        <Button variant="ghost" size="icon" asChild className="bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20">
-          <Link href="/">
-            <ArrowLeft className="h-5 w-5" />
-          </Link>
-        </Button>
-        {/* <ThemeToggle /> */}
-      </div>
+      <div className="absolute top-6 left-6 right-6 z-50 flex items-center">
+  <Link
+    href="/"
+    className="inline-flex items-center justify-center p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20"
+  >
+    <ArrowLeft className="h-5 w-5" />
+  </Link>
+</div>
+
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-12">

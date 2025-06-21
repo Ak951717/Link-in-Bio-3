@@ -8,9 +8,11 @@ import { CTAButtons } from "@/components/cta-buttons"
 import { FloatingElements } from "@/components/floating-elements"
 import { motion } from "framer-motion"
 
+
 export default function Home() {
   return (
     <main className="min-h-screen relative overflow-hidden">
+      
       <AnimatedBackground />
       <FloatingElements />
       

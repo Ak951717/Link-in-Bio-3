@@ -1,5 +1,6 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { Heart, Star, Zap, Sparkles } from "lucide-react"
 
@@ -11,13 +12,21 @@ const floatingElements = [
 ]
 
 export function FloatingElements() {
+  const [windowWidth, setWindowWidth] = useState(0)
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth)
+  }, [])
+
+  if (windowWidth === 0) return null // Optional: render nothing until client is ready
+
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden -z-10">
       {floatingElements.map((element, index) => (
         <motion.div
           key={index}
           className={`absolute ${element.color} opacity-20`}
-          initial={{ y: "100vh", x: Math.random() * window.innerWidth }}
+          initial={{ y: "100vh", x: Math.random() * windowWidth }}
           animate={{
             y: "-20vh",
             rotate: 360,
